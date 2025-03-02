@@ -56,4 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function guardarEnLocalStorage() {
         localStorage.setItem("transacciones", JSON.stringify(transacciones));
     }
+    function prueba(){
+    }
 });
