@@ -1,10 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const formulario = document.getElementById('formulario');
+    const resultado = document.getElementById('resultado');
 
-    const boton = document.getElementById('miBoton');
-    const mensaje = document.getElementById('mensaje');
+    formulario.addEventListener('submit', (evento) => {
+        evento.preventDefault();
+        const nombre = document.getElementById('nombre').value;
+        const monto = document.getElementById('monto').value;
 
-    boton.addEventListener('click',() =>{
-        mensaje.textContent = 'Este mensaje ha sido presionado';
-    })
-
+        //mostrar datos en pantalla
+        resultado.textContent = `Hola ${nombre}, el monto ingresado es: ${monto}`;
+        formulario.reset(); //limpiar formulario
+    });
 });
