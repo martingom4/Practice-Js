@@ -1,32 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Administrador de finanzas</title>
+    <title>Administrador de Finanzas</title>
 </head>
+<body>
+
     <header>
-        <h1>Aca ira el nombre (por definir)</h1>
+        <h1>Aquí irá el nombre (por definir)</h1>
     </header>
-    <body>
-        <div class="contenedor">
-            <div class="izquierda">
-                <div>
-                    Arriba Izquierda
 
-                </div>
-                <div>
-                    Abajo Izquierda
-                </div>
+    <div class="contenedor">
+        <div class="izquierda">
+            <div>
+                <form id="saldo-form">
+                    <label for="saldoInicialInput">Saldo Inicial</label>
+                    <input type="number" name="saldoInicial" id="saldoInicialInput">
+                    <button type="submit">Guardar</button>
+                </form>
             </div>
-            
-            <div class="derecha">
-
-                Mitad Derecha
-
+            <div>
+                <h1>Cosas por pagar</h1>
             </div>
         </div>
 
-    </body>
+        <div class="derecha">
+            <form id="gastos-form">
+                <label for="gastosInput">Gastos</label>
+                <input type="number" name="gastos" id="gastosInput">
+
+                <label for="descripcion">Descripción</label>
+                <input type="text" name="descripcion" id="descripcion">
+
+                <button type="submit">Guardar</button>
+            </form>
+
+            <h2>Historial de gastos</h2>
+            <ul id="gastos-lista">
+                <!-- Aquí se insertarán los elementos de la lista -->
+                 
+            </ul>
+        </div>
+    </div>
+
+</body>
 </html>
