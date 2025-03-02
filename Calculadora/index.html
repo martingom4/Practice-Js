@@ -9,16 +9,17 @@
     <h1>Captura de datos con Js</h1>
     <form id="formulario">
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <input type="text" id="nombre" name="nombre">
         <label for="monto">Monto:</label>
-        <input type="number" id="monto" placeholder="Ejmplo:500" required>
+        <input type="number" id="monto" placeholder="Ejmplo:500" >
         <button type="submit">Agregar</button>
 
     </form>
 
-    <h2>ultima entrada:</h2>
-    <p id="resultado">No hay datos ingreados aun</p>
-
+    <h2>📜 Historial de Entradas</h2>
+    <ul id="lista-transacciones">
+        <!-- Aquí se agregarán las transacciones -->
+    </ul>
     <script src="script.js"></script>
 </body>
 </html>
