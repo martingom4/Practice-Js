@@ -2,5 +2,9 @@
   {
     "tipo": "Ingreso",
     "monto": 2000
+  },
+  {
+    "tipo": "compra hielo",
+    "monto": -200
   }
 ]
