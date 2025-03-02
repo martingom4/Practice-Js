@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Calculadora de Presupuesto</h1>
+
+        <!-- Sección de saldo -->
+        <div class="saldo">
+            <h2>Saldo Actual: <span id="saldo">$0.00</span></h2>
+        </div>
+
+        <!-- Formulario para agregar ingresos/gastos -->
+        <form id="transaccion-form">
+            <input type="text" id="descripcion" placeholder="Descripción" required>
+            <input type="number" id="monto" placeholder="Monto" required>
+            <button type="submit">Agregar</button>
+        </form>
+
+        <!-- Lista de transacciones -->
+        <h3>📜 Historial de Transacciones</h3>
+        <ul id="lista-transacciones">
+            <!-- Aquí se mostrarán las transacciones -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
