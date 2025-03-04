@@ -1,5 +1,6 @@
 {
   "name": "dev-tree",
+  "type": "module",
   "version": "1.0.0",
   "description": "Primer proyecto con express y Typescript",
   "main": "index.js",

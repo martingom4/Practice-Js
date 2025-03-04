@@ -36,6 +36,7 @@ npx kill-port #el puerto a eliminar
 ### Activar  ESM(ECMAScript Modules  )
 - En el package.json creamos una nueva linea
     > esto se puede ponser en el principio de el archivo debajo de name
+    >> y para importar seria import modulo from 'nombre'
 ```json
 "type": "module"
 ```
