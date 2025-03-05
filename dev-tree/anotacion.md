@@ -253,4 +253,6 @@ En Mongoose, cada campo del esquema puede tener varias opciones:
 
 - res.rendet(): Renderiza una pagina
 - res.send(): Manda un mensaje de creacion correcta
-- res.json(): devuelve un archivo o mensaje json 
+- res.json(): devuelve un archivo o mensaje json
+
+### Any es veneno ya que se pueden manipular los datos que se ponen ahi
