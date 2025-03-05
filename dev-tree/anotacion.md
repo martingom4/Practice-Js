@@ -136,3 +136,117 @@ Aquí tienes una explicación detallada de cada opción en tu archivo `tsconfig.
 | `esModuleInterop`  | Permite importar módulos CommonJS sin problemas        |
 | `declaration`      | Genera archivos de tipos `.d.ts`                       |
 | `include`          | Especifica qué archivos TypeScript deben compilarse    |
+
+
+### Definicion de el esquema orm de moongose
+
+
+## **Tipos de datos en Mongoose**
+
+Mongoose proporciona varios tipos de datos para definir esquemas:
+
+| Tipo       | Descripción                                                    |
+| ---------- | -------------------------------------------------------------- |
+| `String`   | Cadenas de texto (`"Hola"`, `"Usuario123"`)                    |
+| `Number`   | Números enteros y decimales (`42`, `3.14`)                     |
+| `Boolean`  | Valores `true` o `false`                                       |
+| `Date`     | Fechas y horas (`new Date()`)                                  |
+| `Array`    | Listas de valores (`["rojo", "verde", "azul"]`)                |
+| `ObjectId` | Referencia a otro documento en la base de datos                |
+| `Mixed`    | Cualquier tipo de dato (`{ cualquier: "cosa" }`)               |
+| `Buffer`   | Datos binarios (imágenes, archivos)                            |
+| `Map`      | Objeto con claves de tipo `String` y valores de cualquier tipo |
+
+---
+
+## **Ejemplo de tipos con opciones**
+
+Aquí tienes ejemplos de cómo usar cada tipo con distintas configuraciones:
+
+```javascript
+const mongoose = require("mongoose");
+
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true, // Campo obligatorio
+    trim: true, // Elimina espacios en blanco al inicio y final
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true, // Evita correos duplicados en la base de datos
+    trim: true,
+    lowercase: true, // Convierte todo el texto a minúsculas
+  },
+  password: {
+    type: String,
+    required: true,
+    trim: true,
+    minlength: 6, // Mínimo de caracteres
+  },
+  age: {
+    type: Number,
+    required: false,
+    min: 18, // Edad mínima permitida
+    max: 99, // Edad máxima permitida
+  },
+  isActive: {
+    type: Boolean,
+    default: true, // Valor por defecto si no se especifica
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now, // Fecha actual por defecto
+  },
+  roles: {
+    type: [String], // Array de strings
+    enum: ["admin", "user", "editor"], // Solo permite estos valores
+    default: ["user"],
+  },
+  profilePicture: {
+    type: Buffer, // Almacena imágenes o archivos en formato binario
+  },
+  metadata: {
+    type: mongoose.Schema.Types.Mixed, // Puede contener cualquier tipo de dato
+  },
+  preferences: {
+    type: Map, // Objeto con claves dinámicas y valores de cualquier tipo
+    of: String,
+  },
+  friends: [
+    {
+      type: mongoose.Schema.Types.ObjectId, // Referencia a otro usuario
+      ref: "User",
+    },
+  ],
+});
+
+const User = mongoose.model("User", userSchema);
+
+module.exports = User;
+```
+
+---
+
+## **Opciones de configuración de los campos**
+
+En Mongoose, cada campo del esquema puede tener varias opciones:
+
+| Opción      | Descripción                                                  |
+| ----------- | ------------------------------------------------------------ |
+| `type`      | Define el tipo de dato (`String`, `Number`, `Boolean`, etc.) |
+| `required`  | Hace que el campo sea obligatorio (`true` o `false`)         |
+| `unique`    | Garantiza que el valor sea único en la colección             |
+| `trim`      | Elimina espacios en blanco al inicio y final del string      |
+| `lowercase` | Convierte el texto a minúsculas                              |
+| `uppercase` | Convierte el texto a mayúsculas                              |
+| `default`   | Establece un valor predeterminado si no se proporciona uno   |
+| `minlength` | Longitud mínima de un `String`                               |
+| `maxlength` | Longitud máxima de un `String`                               |
+| `min`       | Valor numérico mínimo permitido                              |
+| `max`       | Valor numérico máximo permitido                              |
+| `enum`      | Restringe los valores permitidos a una lista específica      |
+| `validate`  | Permite definir funciones de validación personalizadas       |
+
+---
