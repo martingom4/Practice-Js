@@ -7,8 +7,10 @@ export default function RegisterView() {
 
             </div>
             <nav>
-
-            </nav>
+            <Link to='/auth/login'>
+                Ya tienes cuenta? Inicia sesion aca
+            </Link>
+        </nav>
         </>
     );
 };
