@@ -92,6 +92,33 @@ Aquí tienes una explicación detallada de cada opción en tu archivo `tsconfig.
 }
 ```
 
+## La configuracion completa de package.json es:
+
+```json
+{
+  "name": "dev-tree",
+  "version": "1.0.0",
+  "description": "Primer proyecto con express y Typescript",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "author": "Martin Gomez 03/03/25",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
+```
+
 ---
 
 ### **Resumen rápido**
