@@ -256,3 +256,17 @@ En Mongoose, cada campo del esquema puede tener varias opciones:
 - res.json(): devuelve un archivo o mensaje json
 
 ### Any es veneno ya que se pueden manipular los datos que se ponen ahi
+
+
+# hashear password con bcrypt
+
+```ts
+
+export const hashPassword = async  (password: string) => {
+  const salt = await bcrypt.genSalt(10)
+}
+
+```
+
+> Salt: lo que hace salt es que si dos personas ponen password como contraseña los dos hasheos van a ser totalemente diferentes uno a la otra
+> Rondas: Cuantas veces se van aplicar la funcion de hash entre mas alto mas lento es el sistema pero entre mas alto mas seguro es el hash
