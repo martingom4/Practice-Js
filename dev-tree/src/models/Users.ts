@@ -6,12 +6,21 @@ import mongoose, { Schema } from "mongoose";
 // por lo que debemos especificar el tipo de dato
 // o en type seria TUser
 export interface IUser {
+    handle: string,
     name: string,
     email: string,
     password: string
 }
 // la interfaz tiene que ser un espejo de el schema
 const userSchema = new Schema({
+    handle: {
+        type: String,
+        required: true,
+        trim: true,
+        lowercase: true,
+        unique: true
+
+    },
     name: {
         type: String,
         required: true,
@@ -21,7 +30,8 @@ const userSchema = new Schema({
         type: String,
         required: true,
         unique: true,
-        trim: true
+        trim: true,
+        lowercase: true
     },
     password: {
         type: String,
