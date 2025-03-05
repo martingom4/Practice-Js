@@ -4,7 +4,7 @@ const app = express()
 
 
 app.get('/', (req, res) => {
-    res.send('Hola mundo')
+    res.send('Hola mundo con typescript')
 })
 
 const port = process.env.PORT || 3000
