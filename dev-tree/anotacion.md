@@ -137,9 +137,7 @@ Aquí tienes una explicación detallada de cada opción en tu archivo `tsconfig.
 | `declaration`      | Genera archivos de tipos `.d.ts`                       |
 | `include`          | Especifica qué archivos TypeScript deben compilarse    |
 
-
 ### Definicion de el esquema orm de moongose
-
 
 ## **Tipos de datos en Mongoose**
 
