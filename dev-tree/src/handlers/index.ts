@@ -32,10 +32,26 @@ export const createAccount =  async (req: Request, res: Response)=> {
     user.password = await hashPassword(password)
     user.handle = handle
 
-
-
     await user.save()
     res.status(201).send('Usuario registrado')
 }
 
+export const login = async(req: Request, res: Response) => {
+    let errors = validationResult(req)
+    if (!errors.isEmpty()) {
+        res.status(400).json({errors: errors.array()})
+        return
+    }
 
+    const {email,password} = req.body
+    // revisar si el usuario esta resgistrado
+    const user = await User.findOne({email}) 
+    if (!user) {
+        const error = new Error('El usuario no existe')
+        res.status(404).json({error: error.message})
+        return
+    }
+
+    //comprobar el password
+
+}
