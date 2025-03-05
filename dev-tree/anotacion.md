@@ -270,3 +270,15 @@ export const hashPassword = async  (password: string) => {
 
 > Salt: lo que hace salt es que si dos personas ponen password como contraseña los dos hasheos van a ser totalemente diferentes uno a la otra
 > Rondas: Cuantas veces se van aplicar la funcion de hash entre mas alto mas lento es el sistema pero entre mas alto mas seguro es el hash
+
+
+## Middleware
+- Crear funciones reutilizables pero tambien decidir el orden en que estas se ejecuten. Cada middleware tiene accesos a req y res.
+- Ejemplos: Validaciones, revisar si un usuario esta autenticado, si un registro existe en la base de datos o compartir informacion de una entidad hacia otra
+
+
+### Creacion de middleware
+
+```ts
+
+```
