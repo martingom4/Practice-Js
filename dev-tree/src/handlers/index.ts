@@ -1,9 +1,9 @@
 // aca vamos a tener funciones que se van a llamar desde nuestros routers
 import type{ Request, Response } from 'express'
-import {validationResult} from 'express-validator'
+import { validationResult} from 'express-validator'
 import slug from 'slug'
 import User from "../models/Users"
-import { hashPassword } from '../utils/auth'
+import { hashPassword,checkPassword} from '../utils/auth'
 
 export const createAccount =  async (req: Request, res: Response)=> {
     //manejo de errores
@@ -45,7 +45,7 @@ export const login = async(req: Request, res: Response) => {
 
     const {email,password} = req.body
     // revisar si el usuario esta resgistrado
-    const user = await User.findOne({email}) 
+    const user = await User.findOne({email})
     if (!user) {
         const error = new Error('El usuario no existe')
         res.status(404).json({error: error.message})
@@ -53,5 +53,12 @@ export const login = async(req: Request, res: Response) => {
     }
 
     //comprobar el password
+    const isPasswordCorrect = await checkPassword(password, user.password)
+    if (!isPasswordCorrect) {
+        const error = new Error('Contraseña incorrecta')
+        res.status(401).json({error: error.message})
+        return
+    }
+    res.status(200).send('Usuario logueado')
 
 }
