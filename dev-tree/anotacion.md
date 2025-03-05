@@ -248,3 +248,9 @@ En Mongoose, cada campo del esquema puede tener varias opciones:
 | `validate`  | Permite definir funciones de validación personalizadas       |
 
 ---
+
+### Para resonder registros o creaciones
+
+- res.rendet(): Renderiza una pagina
+- res.send(): Manda un mensaje de creacion correcta
+- res.json(): devuelve un archivo o mensaje json 

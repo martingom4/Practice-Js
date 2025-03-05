@@ -8,7 +8,10 @@ const router = Router()
 
 router.post('/auth/register', async (req,res) => {
     const user = new User(req.body)
+
     await user.save()
+
+    res.send('Usuario registrado')
 })
 
 export default router
