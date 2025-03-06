@@ -25,3 +25,18 @@ let nums2: Array<number> = []// esto es otra manera de definir
 
 let tuplas: [number, string, boolean]= [1, "hola", true] // esto es una tuplas
 
+// enum
+
+const chica = 's'
+const mediana = 'm'
+const grande = 'l'
+const extraGrande = 'xl'
+
+enum Tallas {
+    Chica = 's',
+    Mediana = 'm',
+    Grande = 'l',
+    ExtraGrande = 'xl'
+}
+
+console.log(Tallas.Chica)

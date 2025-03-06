@@ -56,5 +56,18 @@ tsc -init
 ```ts
 let tuplas :[ definimos los valores que tendra] = [1, 'Martin Gomez', bool]
 ```
-
 > Podemos definir arreglos dentro de las tuplas ejemplo ** string[] **
+
+## Enums
+
+- los podemos hacer para estados de carga
+
+```ts
+enum Tallas {
+    Chica,
+    Mediana,
+    Grande,
+    ExtraGrande
+}
+```
+>podemos definirlo como querramos pero automaticamente se pone de 0 a los valores que pongamos 
