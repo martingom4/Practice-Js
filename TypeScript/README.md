@@ -1,22 +1,22 @@
-# 📚 Practicando con TypeScript
+# Practicando con TypeScript
 
 En esta sección profundizaré en **TypeScript**, explorando aspectos fundamentales y avanzados para mejorar la calidad del código y aprovechar al máximo este poderoso lenguaje.
 
 ---
 
-## 🚀 Contenido
+## Contenido
 
-- ✅ **Tipos Básicos:** Fundamentos esenciales sobre tipos primitivos.
-- ✅ **Tipos Avanzados:** Uso de tipos complejos y personalizados.
-- ✅ **Programación Orientada a Objetos:** Aplicación práctica de conceptos OOP.
-- ✅ **Genéricos:** Creación de componentes reutilizables con tipos dinámicos.
-- ✅ **Módulos:** Organización eficiente del código con módulos.
-- ✅ **Integración con ReactJS:** Uso efectivo de TypeScript en proyectos React.
-- ✅ **Decoradores:** Aplicación de decoradores para enriquecer clases y métodos.
+- **Tipos Básicos:** Fundamentos esenciales sobre tipos primitivos.
+- **Tipos Avanzados:** Uso de tipos complejos y personalizados.
+- **Programación Orientada a Objetos:** Aplicación práctica de conceptos OOP.
+- **Genéricos:** Creación de componentes reutilizables con tipos dinámicos.
+- **Módulos:** Organización eficiente del código con módulos.
+- **Integración con ReactJS:** Uso efectivo de TypeScript en proyectos React.
+- **Decoradores:** Aplicación de decoradores para enriquecer clases y métodos.
 
 ---
 
-## 🔧 Comandos útiles
+## Comandos útiles
 
 **Inicializar configuración de TypeScript:**
 
@@ -49,7 +49,7 @@ tsc --init
 
 ---
 
-## 📌 Tipos de datos en TypeScript
+## Tipos de datos en TypeScript
 
 - `any`: Evitar siempre que sea posible.
 - `unknown`: Más seguro que `any`, requiere comprobaciones adicionales.
@@ -61,16 +61,16 @@ tsc --init
 
 ### Ejemplos clave
 
-#### 🔹 Tuplas
+#### Tuplas
 
 ```ts
-let tuplaEjemplo: [number, string, boolean] = [1, 'Martin Gomez', true];
+let tuplaEjemplo: [number, string, boolean] = [1, "Martin Gomez", true];
 
 // También se pueden definir arreglos dentro de tuplas:
-let tuplaConArray: [string, number[]] = ['Notas', [10, 9, 8]];
+let tuplaConArray: [string, number[]] = ["Notas", [10, 9, 8]];
 ```
 
-#### 🔹 Enums
+#### Enums
 
 Útil para estados de carga o valores constantes:
 
@@ -93,7 +93,7 @@ const enum LoadingState {
 
 > Al usar `const enum`, TypeScript sustituye valores directamente en la compilación.
 
-#### 🔹 Objetos tipados
+#### Objetos tipados
 
 Objetos con propiedades opcionales (`?`):
 
@@ -108,10 +108,9 @@ Si se elimina el signo `?`, la propiedad se vuelve obligatoria.
 
 ---
 
-🎯 **Recomendaciones:**
+**Recomendaciones:**
 
 - Evita abusar del tipo `any`. Siempre prioriza tipos precisos.
 - Aprovecha la inferencia de tipos para simplificar el código.
 - Usa `unknown` en situaciones de incertidumbre y valida antes de usar.
 - Organiza claramente tu código con módulos para facilitar la escalabilidad y mantenimiento.
-
