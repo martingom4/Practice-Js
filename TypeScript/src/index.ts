@@ -18,4 +18,10 @@ let nums2: Array<number> = []// esto es otra manera de definir
 
 
 
-// animales.map(x => x.toUpperCase()) autocompletado sabe que tipo de dato es 
+// animales.map(x => x.toUpperCase()) autocompletado sabe que tipo de dato es
+
+
+// las tuplas no existen en js pero en ts si
+
+let tuplas: [number, string, boolean]= [1, "hola", true] // esto es una tuplas
+

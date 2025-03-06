@@ -50,3 +50,11 @@ tsc -init
 - tuplas
 - enums
 - Tipos inferidos
+
+## Tuplas
+
+```ts
+let tuplas :[ definimos los valores que tendra] = [1, 'Martin Gomez', bool]
+```
+
+> Podemos definir arreglos dentro de las tuplas ejemplo ** string[] **
