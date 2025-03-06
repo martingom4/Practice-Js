@@ -17,7 +17,6 @@ let nums: number[] = [] // esto es una manera de definir
 let nums2: Array<number> = []// esto es otra manera de definir
 
 
-
 // animales.map(x => x.toUpperCase()) autocompletado sabe que tipo de dato es
 
 
@@ -40,3 +39,12 @@ enum Tallas {
 }
 
 console.log(Tallas.Chica)
+
+const enum loadingState {
+    Idle,
+    Loading,
+    Success,
+    Error
+}
+
+const estado = loadingState.Idle

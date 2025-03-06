@@ -70,4 +70,15 @@ enum Tallas {
     ExtraGrande
 }
 ```
->podemos definirlo como querramos pero automaticamente se pone de 0 a los valores que pongamos 
+>podemos definirlo como querramos pero automaticamente se pone de 0 a los valores que pongamos
+
+
+```ts
+const enum loadingState {
+    Idle,
+    Loading,
+    Success,
+    Error
+}
+```
+>Usar const al inicio de la declaracion al momento de compilar lo que hace es asignarlo a medida que lo vamos usando 
