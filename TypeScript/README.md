@@ -40,3 +40,13 @@ tsc -init
 ```
 
 > se agrega _preLaunchTask_ para poder hacer el build de prueba
+
+## Tipos de datos de Ts
+
+- any: Es recomendado no usarlo
+- unknown
+- never
+- arrays
+- tuplas
+- enums
+- Tipos inferidos
