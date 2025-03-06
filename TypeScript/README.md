@@ -56,6 +56,7 @@ tsc -init
 ```ts
 let tuplas :[ definimos los valores que tendra] = [1, 'Martin Gomez', bool]
 ```
+
 > Podemos definir arreglos dentro de las tuplas ejemplo ** string[] **
 
 ## Enums
@@ -64,21 +65,30 @@ let tuplas :[ definimos los valores que tendra] = [1, 'Martin Gomez', bool]
 
 ```ts
 enum Tallas {
-    Chica,
-    Mediana,
-    Grande,
-    ExtraGrande
+  Chica = "s",
+  Mediana = "m",
+  Grande = "l",
+  ExtraGrande = "xl",
 }
 ```
->podemos definirlo como querramos pero automaticamente se pone de 0 a los valores que pongamos
 
+> podemos definirlo como querramos pero automaticamente se pone de 0 a los valores que pongamos
 
 ```ts
 const enum loadingState {
-    Idle,
-    Loading,
-    Success,
-    Error
+  Idle,
+  Loading,
+  Success,
+  Error,
 }
 ```
->Usar const al inicio de la declaracion al momento de compilar lo que hace es asignarlo a medida que lo vamos usando 
+
+> Usar const al inicio de la declaracion al momento de compilar lo que hace es asignarlo a medida que lo vamos usando
+
+## Objetos
+
+```ts
+const objeto: { id: number; nombre?: string } = { id: 1 };
+```
+
+> Puedo simplemento no poner el ? para que esa variable no tenga necesidad de ser inicializada, si quiero que sea mandatoria le quito el ? y se tiene que inicilizar si o si en el objeto para que pueda ser usada en otras partes de el codigo

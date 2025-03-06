@@ -48,3 +48,9 @@ const enum loadingState {
 }
 
 const estado = loadingState.Idle
+
+const objeto: {id: number,
+    nombre?: string
+} = {id:1, nombre: 'martin'}
+
+objeto.nombre = "hola"
