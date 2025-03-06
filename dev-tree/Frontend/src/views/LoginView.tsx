@@ -1,19 +1,17 @@
 import {Link} from 'react-router-dom';
 
 export default function LoginView(){
-    return (
+    return(
         <>
-        <div className=' bg-slate-800 min-h-screen'>
-            <div className='max-w-lg mx-auto pt-10 px-5'>
-                <img src = '/logo.svg' alt='logo tipo de la app'/>
-                <div className=' text-white'>Login</div>
+            <div>
+                <h1 className=' text-white'>Login</h1>
             </div>
-        </div>
-        <nav>
-            <Link to='/auth/register'>
-                No tienes cuenta? Creala aca
-            </Link>
-        </nav>
-    </>
+            <nav>
+                <Link className= ' text-white ' to='/auth/Register'>
+                    ¿Aun no tienes cuenta? Registrate aca
+                </Link>
+            </nav>
+        </>
     )
 }
+
