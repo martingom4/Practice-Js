@@ -19,3 +19,24 @@ tsc -init
 ```
 
 > Esto lo que hace es generar el archivo de configuracion de typescrip
+
+- Launch.json
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Iniciar el programa",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\src\\index.ts",
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "outFiles": ["${workspaceFolder}/**/*.js"]
+    }
+  ]
+}
+```
+
+> se agrega _preLaunchTask_ para poder hacer el build de prueba
