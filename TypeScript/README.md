@@ -162,6 +162,18 @@ function validaEdad(edad: number, msj: string = "Hola pa"): string {
 
 ---
 
+## Tipo de retorno never
+
+- estas estan dedicadas es mandar errores nada mas
+
+```ts
+function errorUsuario(): never {
+  throw new Error("Contraseña o correo incorrecta ");
+}
+```
+
+> Se tiene que decir que siempre vamos a tirar un error para que asi no se puedan inyectar cosas a la base de datos
+
 🎯 **Recomendaciones:**
 
 - Evita abusar del tipo `any`. Siempre prioriza tipos precisos.

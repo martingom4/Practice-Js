@@ -91,3 +91,9 @@ function validaEdad(edad:number, msj:string ='Hola pa'):string{
 
 
 validaEdad(18)
+
+
+function errorUsuario(): never{
+    throw new Error('Contraseña o correo incorrecta ')
+
+}
