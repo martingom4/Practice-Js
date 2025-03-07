@@ -104,6 +104,32 @@ const usuario: { id: number; nombre?: string } = { id: 1 };
 usuario.nombre = "Martin";
 ```
 
+> tambien en vez de poner usuario: y definir todo el objeto que tendra dentro podemos usar tipos ejemplos:
+
+```ts
+type Direccion = {
+  numero: number;
+  calle: string;
+  pais: string;
+};
+type Persona = {
+  id: number;
+  nombre?: string;
+  talla: Tallas;
+  direccion: Direccion;
+};
+const objeto: Persona = {
+  id: 1,
+  nombre: "martin",
+  talla: Tallas.Chica,
+  direccion: {
+    numero: 123,
+    calle: "calle falsa",
+    pais: "mexico",
+  },
+};
+```
+
 Si se elimina el signo `?`, la propiedad se vuelve obligatoria.
 
 ---

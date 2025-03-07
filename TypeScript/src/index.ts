@@ -49,8 +49,24 @@ const enum loadingState {
 
 const estado = loadingState.Idle
 
-const objeto: {id: number,
-    nombre?: string
-} = {id:1, nombre: 'martin'}
+type Direccion = {
+    numero: number,
+    calle: string
+    pais: string
+}
+type Persona  = {id: number,
+    nombre?: string,
+    talla: Tallas,
+    direccion: Direccion
+}
+const objeto: Persona = {id:1,
+    nombre: 'martin' ,
+    talla: Tallas.Chica,
+    direccion: {
+        numero: 123,
+        calle: 'calle falsa',
+        pais: 'mexico'
+    }
+}
 
 objeto.nombre = "hola"
