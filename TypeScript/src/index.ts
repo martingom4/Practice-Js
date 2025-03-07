@@ -127,3 +127,21 @@ function sumaDos(n: number | string): number {
 
 
 sumaDos(2)
+
+// intersection type
+
+type Audit = {
+    created_ad: string,
+    modified_at: string
+}
+
+type Prodruct ={
+    name: string,
+}
+
+
+const product: Audit & Prodruct = {
+    name: '',
+    created_ad: '',
+    modified_at: ''
+}

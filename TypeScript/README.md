@@ -210,10 +210,32 @@ sumaDos(2);
 
 ---
 
+## Interseccion Type
+
+- los tipos de interseccion son los tipos en los que se un objeto puede usar dos tipos de datos prviamente definidas pero establecidas y tienen que tener esos dos tipos de datos si o si
+
+```ts
+// intersection type
+
+type Audit = {
+  created_ad: string;
+  modified_at: string;
+};
+
+type Prodruct = {
+  name: string;
+};
+
+const product: Audit & Prodruct = {
+  name: "",
+  created_ad: "",
+  modified_at: "",
+};
+```
+
 🎯 **Recomendaciones:**
 
 - Evita abusar del tipo `any`. Siempre prioriza tipos precisos.
 - Aprovecha la inferencia de tipos para simplificar el código.
 - Usa `unknown` en situaciones de incertidumbre y valida antes de usar.
 - Organiza claramente tu código con módulos para facilitar la escalabilidad y mantenimiento.
-
