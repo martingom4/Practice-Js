@@ -97,3 +97,33 @@ function errorUsuario(): never{
     throw new Error('Contraseña o correo incorrecta ')
 
 }
+
+
+let puntaje: number | string = 98
+
+puntaje= 'hola'
+
+
+type Animal = {
+    id: number,
+    estado: string
+}
+type Usuario = {
+    id: number,
+    nombre: string
+}
+
+let animal: Animal | Usuario = {id: 1 , estado:'', nombre: ''}
+
+
+// usar union type con funciones
+
+function sumaDos(n: number | string): number {
+    if(typeof n === 'number'){
+        return n + 2
+    }
+    return parseInt(n) + 2
+}
+
+
+sumaDos(2)

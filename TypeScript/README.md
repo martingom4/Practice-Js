@@ -162,17 +162,53 @@ function validaEdad(edad: number, msj: string = "Hola pa"): string {
 
 ---
 
-## Tipo de retorno never
+## 🔹 Tipo de retorno `never`
 
-- estas estan dedicadas es mandar errores nada mas
+Especialmente útil para funciones que siempre lanzan errores:
 
 ```ts
 function errorUsuario(): never {
-  throw new Error("Contraseña o correo incorrecta ");
+  throw new Error("Contraseña o correo incorrecta");
 }
 ```
 
-> Se tiene que decir que siempre vamos a tirar un error para que asi no se puedan inyectar cosas a la base de datos
+> Usar `never` garantiza claridad sobre funciones que no retornan valores convencionales.
+
+## 🔹 Union Types
+
+Permiten definir múltiples tipos posibles para una variable:
+
+```ts
+let puntaje: number | string = 98;
+puntaje = "esto es un string";
+```
+
+Evita usar union types como sustitutos del tipo `any`. Sé lo más específico posible.
+
+```ts
+type Animal = {
+  id: number;
+  estado: string;
+};
+type Usuario = {
+  id: number;
+  nombre: string;
+};
+
+let animal: Animal | Usuario = { id: 1, estado: "activo", nombre: "" };
+
+// Union types en funciones
+function sumaDos(n: number | string): number {
+  if (typeof n === "number") {
+    return n + 2;
+  }
+  return parseInt(n) + 2;
+}
+
+sumaDos(2);
+```
+
+---
 
 🎯 **Recomendaciones:**
 
@@ -180,3 +216,4 @@ function errorUsuario(): never {
 - Aprovecha la inferencia de tipos para simplificar el código.
 - Usa `unknown` en situaciones de incertidumbre y valida antes de usar.
 - Organiza claramente tu código con módulos para facilitar la escalabilidad y mantenimiento.
+

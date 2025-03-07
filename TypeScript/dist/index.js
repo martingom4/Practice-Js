@@ -41,11 +41,24 @@ const fn = (edad) => {
         return 0;
     }
 };
-function validaEdad(edad) {
+function validaEdad(edad, msj = 'Hola pa') {
     if (edad > 17) {
-        return 'puedes ingresar';
+        return `puedes ingresar ${msj}`;
     }
     return 'no puedes ingresar';
 }
 validaEdad(18);
+function errorUsuario() {
+    throw new Error('Contraseña o correo incorrecta ');
+}
+let puntaje = 98;
+puntaje = 'hola';
+let animal = { id: 1, estado: '', nombre: '' };
+function sumaDos(n) {
+    if (typeof n === 'number') {
+        return n + 2;
+    }
+    return parseInt(n) + 2;
+}
+sumaDos(2);
 //# sourceMappingURL=index.js.map
