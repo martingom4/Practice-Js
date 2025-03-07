@@ -69,4 +69,25 @@ const objeto: Persona = {id:1,
     }
 }
 
-objeto.nombre = "hola"
+const arr: Persona[] = [] // array de objetos de tipo persona
+
+
+
+const fn:(a:number) => number = (edad: number ) => {
+    if (edad > 18) {
+        return 1
+    } else {
+        return 0
+    }
+}
+
+function validaEdad(edad:number, msj:string ='Hola pa'):string{
+    if (edad>17){
+        return `puedes ingresar ${msj}`
+    }
+    return 'no puedes ingresar'
+
+}
+
+
+validaEdad(18)

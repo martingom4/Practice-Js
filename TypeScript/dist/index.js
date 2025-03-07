@@ -23,4 +23,29 @@ var Tallas;
 })(Tallas || (Tallas = {}));
 console.log(Tallas.Chica);
 const estado = 0;
+const objeto = { id: 1,
+    nombre: 'martin',
+    talla: Tallas.Chica,
+    direccion: {
+        numero: 123,
+        calle: 'calle falsa',
+        pais: 'mexico'
+    }
+};
+const arr = [];
+const fn = (edad) => {
+    if (edad > 18) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+};
+function validaEdad(edad) {
+    if (edad > 17) {
+        return 'puedes ingresar';
+    }
+    return 'no puedes ingresar';
+}
+validaEdad(18);
 //# sourceMappingURL=index.js.map
