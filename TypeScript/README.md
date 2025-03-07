@@ -233,6 +233,20 @@ const product: Audit & Prodruct = {
 };
 ```
 
+## Literal Types
+- Puedo definir los valores que una constante usara estaticamente
+
+```ts
+
+// literal types
+
+type Fibo = 0 | 1 | 2 | 3 | 5
+
+const nDeFibo: Fibo = 3
+```
+
+## nulleables types
+
 🎯 **Recomendaciones:**
 
 - Evita abusar del tipo `any`. Siempre prioriza tipos precisos.

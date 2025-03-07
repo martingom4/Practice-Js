@@ -145,3 +145,22 @@ const product: Audit & Prodruct = {
     created_ad: '',
     modified_at: ''
 }
+
+// literal types
+
+type Fibo = 0 | 1 | 2 | 3 | 5
+
+const nDeFibo: Fibo = 3 // solo puede ser 4
+
+
+// nulleables types
+
+function toNumber(s: string | null | undefined): number {
+    if (!s) {
+        return 0
+    }
+    return parseInt(s)
+}
+
+
+const n  = toNumber(undefined)
