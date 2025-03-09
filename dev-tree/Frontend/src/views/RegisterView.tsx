@@ -53,6 +53,10 @@ export default function RegisterView() {
             className="bg-slate-200 border-none p-3 rounded-lg placeholder-slate-400"
             {...register("email", {
               required: "El email es obligatorio",
+              pattern: {
+                value: /\S+@\S+\.\S+/,
+                message: "El email debe ser valido",
+              },
             })}
           />
 
@@ -89,6 +93,10 @@ export default function RegisterView() {
             className="bg-slate-200 border-none p-3 rounded-lg placeholder-slate-400"
             {...register("password", {
               required: "El password es obligatorio",
+              minLength: {
+                value: 8,
+                message: "El password debe tener al menos 8 caracteres",
+              },
             })}
           />
         {errors.password && <ErrorMessage>{errors.password.message}</ErrorMessage>}
@@ -109,6 +117,7 @@ export default function RegisterView() {
               className="bg-slate-200 border-none p-3 rounded-lg placeholder-slate-400"
               {...register("password_confirmation", {
                 required: "El password debe ser igual al anterior",
+                validate: (value) => value === watch("password") || "Las contraseñas no coinciden",
               })}
             />
             {errors.password_confirmation && <ErrorMessage>{errors.password_confirmation.message}</ErrorMessage>}
