@@ -1,5 +1,6 @@
 import ErrorMessage from "../components/ErrorMessage.tsx";
-import { Link } from "react-router-dom";
+import { InitialEntry, Link } from "react-router-dom";
+import type{RegisterForm } from '../types/index.ts'
 import { useForm } from "react-hook-form";
 export default function RegisterView() {
   const initialValues = {
@@ -16,9 +17,11 @@ export default function RegisterView() {
     formState: { errors },
   } = useForm({ defaultValues: initialValues });
   console.log(errors);
-  const handleRegister = () => {
-    console.log("desde de handleRegister");
+
+  const handleRegister = (formData:RegisterForm) => {
+    console.log(formData);
   };
+
   return (
     <>
       <form
