@@ -1,36 +1,10 @@
 import ErrorMessage from "../components/ErrorMessage.tsx";
 import {Link } from "react-router-dom";
-import { isAxiosError} from "axios";
-import {toast} from 'sonner'
-import type{RegisterForm } from '../types/index.ts'
-import { useForm } from "react-hook-form";
-import api from "../config/axios.ts";
+import UserRegister from "../hooks/userRegister.ts";
 import Footer from "../components/Footer.tsx";
 
 export default function RegisterView() {
-
-  const initialValues = {
-    name: "",
-    email: "",
-    handle: "",
-    password: "",
-    password_confirmation: ""
-  };
-  const {register,handleSubmit,watch,reset,formState: { errors },} = useForm({defaultValues: initialValues });
-  console.log(errors);
-
-  const handleRegister = async (formData:RegisterForm) => {
-    try {
-      const {data} = await api.post(`/auth/register`, formData)
-      toast.success(data)
-      reset()
-    } catch (error) {
-      if(isAxiosError(error)&& error.response){
-        toast.error(error.response?.data.error)
-      }
-
-    }
-  };
+  const { register, handleSubmit, watch, reset, errors, handleRegister } = UserRegister();
 
   return (
     <>
