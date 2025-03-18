@@ -7,7 +7,7 @@
 
 1. Alguna sintaxis a tener en cuenta al momento de crear el servidor en express
 
-```js
+```ts
 const app = exprees();
 app.listen(3000, () => {
   console.log("Servidos funcionando en el puerto 3000");
@@ -38,7 +38,7 @@ npx kill-port #el puerto a eliminar
 ### Activar ESM(ECMAScript Modules )
 
 - En el package.json creamos una nueva linea
-  > esto se puede ponser en el principio de el archivo debajo de name
+  > esto se puede poner en el principio de el archivo debajo de name
   >
   > > Y para importar seria import modulo from 'nombre'
 
@@ -67,8 +67,6 @@ npx kill-port #el puerto a eliminar
   "include": ["src/**/*.ts"]
 }
 ```
-
-Aquí tienes una explicación detallada de cada opción en tu archivo `tsconfig.json` para TypeScript con Express:
 
 ---
 
@@ -159,7 +157,6 @@ Mongoose proporciona varios tipos de datos para definir esquemas:
 
 ## **Ejemplo de tipos con opciones**
 
-Aquí tienes ejemplos de cómo usar cada tipo con distintas configuraciones:
 
 ```javascript
 const mongoose = require("mongoose");

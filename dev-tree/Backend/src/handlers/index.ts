@@ -9,14 +9,14 @@ export const createAccount =  async (req: Request, res: Response)=> {
 
 
     const {email,password} = req.body
-    const userExists = await User.findOne({email}) // pero esto devuelve un null o un objeto
+    const userExists = await User.findOne({email}) // pero esto devuelve un null o un objeto si es un null es que no hay un usuario con ese email y si es un objeto es que si hay un usuario con ese email y devuelve toda la informacion del usuario
 
     if (userExists) {
         const error = new Error('El Email ya existe en la base de datos')
         res.status(409).json({error: error.message})
         return
     }
-    const handle = slug(req.body.handle, '')
+    const handle = slug(req.body.handle, '')//slug lo que hace es que si el usuario pone un espacio en blanco lo va a reemplazar con todo junto
     const handleExists = await User.findOne({handle})
     if (handleExists) {
         const error = new Error('Nombre de usuario no disponible')
