@@ -5,6 +5,7 @@ import {toast} from 'sonner'
 import type{RegisterForm } from '../types/index.ts'
 import { useForm } from "react-hook-form";
 import api from "../config/axios.ts";
+import Footer from "../components/Footer.tsx";
 
 export default function RegisterView() {
 
@@ -151,6 +152,9 @@ export default function RegisterView() {
           ¿Ya tienes cuenta? Inicia sesion aca
         </Link>
       </nav>
+      <Footer/>
+
     </>
+
   );
 }

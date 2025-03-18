@@ -17,13 +17,17 @@ export const createAccount =  async (req: Request, res: Response)=> {
         return
     }
     const handle = slug(req.body.handle, '')//slug lo que hace es que si el usuario pone un espacio en blanco lo va a reemplazar con todo junto
-    const handleExists = await User.findOne({handle})
+    const handleExists = await User.findOne({handle}) // hace lo mismo buasca si existe un usuario con ese handle y si existe devuelve un objeto y si no existe devuelve un null
+
     if (handleExists) {
         const error = new Error('Nombre de usuario no disponible')
         res.status(400).json({error: error.message})
         return
     }
-
+    /* La parte de abajo lo que hace es guardar las cosas en la base de datos crea el nuevo usario
+    hashea la contraseña y guarda el handle en la base de datos
+    y manda un codigo 201 que significa que se creo un nuevo recurso en la base de datos 
+    */
     const user = new User(req.body)
     user.password = await hashPassword(password)
     user.handle = handle
