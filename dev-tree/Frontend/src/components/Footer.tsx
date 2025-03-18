@@ -4,7 +4,7 @@ export default function Footer() {
         <footer className="bg-gray-900 text-white p-6 text-center">
 
 
-            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-sm ">
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 text-sm ">
                 {/* Sección de Información */}
                 <div>
                     <h2 className="text-lg font-bold">Sobre Nosotros</h2>
