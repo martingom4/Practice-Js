@@ -181,3 +181,8 @@ function getUser(id: number){
 const user = getUser(1)
 
 console.log('usuasrio', user?.create_at)
+
+
+const array1 = null
+
+array1?.[0]
