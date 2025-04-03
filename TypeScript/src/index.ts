@@ -186,3 +186,7 @@ console.log('usuasrio', user?.create_at)
 const array1 = null
 
 array1?.[0]
+
+const fn5:any = null
+
+console.log(fn5?.()) // no se ejecuta la funcion porque es null

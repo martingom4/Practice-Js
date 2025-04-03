@@ -86,4 +86,8 @@ function getUser(id) {
 }
 const user = getUser(1);
 console.log('usuasrio', user === null || user === void 0 ? void 0 : user.create_at);
+const array1 = null;
+array1 === null || array1 === void 0 ? void 0 : array1[0];
+const fn5 = null;
+console.log(fn5 === null || fn5 === void 0 ? void 0 : fn5());
 //# sourceMappingURL=index.js.map
