@@ -61,4 +61,29 @@ function sumaDos(n) {
     return parseInt(n) + 2;
 }
 sumaDos(2);
+const product = {
+    name: '',
+    created_ad: '',
+    modified_at: ''
+};
+const nDeFibo = 3;
+function toNumber(s) {
+    if (!s) {
+        return 0;
+    }
+    return parseInt(s);
+}
+const n = toNumber(undefined);
+function getUser(id) {
+    if (id < 0) {
+        return null;
+    }
+    return {
+        id: 1,
+        nombre: 'martin',
+        create_at: new Date(),
+    };
+}
+const user = getUser(1);
+console.log('usuasrio', user === null || user === void 0 ? void 0 : user.create_at);
 //# sourceMappingURL=index.js.map

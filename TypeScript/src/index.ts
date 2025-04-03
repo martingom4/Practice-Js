@@ -164,3 +164,20 @@ function toNumber(s: string | null | undefined): number {
 
 
 const n  = toNumber(undefined)
+
+
+function getUser(id: number){
+    if (id  < 0){
+        return null
+    }
+    return {
+        id: 1,
+        nombre: 'martin',
+        create_at: new Date(),
+    }
+}
+
+
+const user = getUser(1)
+
+console.log('usuasrio', user?.create_at)
