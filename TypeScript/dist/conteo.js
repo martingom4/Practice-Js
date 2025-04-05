@@ -1,10 +1,14 @@
 "use strict";
-const cadena = 'aaaaabbbBbcccciiii';
+const cadena = 'bbaaaabBbcccciiii';
 const conteo = (cadena) => {
-    cadena.toLowerCase;
     const resultado = {};
-    for (let i = 0; i < cadena.length; i++) {
-        const letra = cadena[i];
+    const lowercad = cadena.toLowerCase();
+    const sorted = Object.keys(resultado);
+    sorted.sort();
+    for (let i = 0; i < lowercad.length; i++) {
+        const letra = lowercad[i];
+        const soteado = sorted[i];
+        console.log(soteado);
         if (resultado[letra] === undefined) {
             resultado[letra] = 1;
         }
