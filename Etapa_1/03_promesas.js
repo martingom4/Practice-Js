@@ -94,3 +94,26 @@ apiPrueba().then(mensaje => {
 	•	Si ambos parámetros son números, resuelva con la suma
 	•	Si no, rechace con un error tipo “Parámetros inválidos”
 */
+//typeof
+const sumaPromise = (a, b) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (typeof a === "number" && typeof b === "number") {
+        resolve(a + b);
+      } else {
+        reject("❌ Parámetros inválidos");
+      }
+    }, 2000);
+  });
+};
+
+async function sumarAsync() {
+  try {
+    const resultado = await sumaPromise(10, 20);
+    console.log(`✔️ Resultado: ${resultado}`);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+sumarAsync();
