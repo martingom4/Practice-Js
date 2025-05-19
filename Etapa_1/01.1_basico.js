@@ -133,10 +133,11 @@ console.log(numerosl(numeros))
 
 const valores = [10, 20, 30];
 
+// el meotodo reduce sirve como si fuera un for o para iterar dentro de algo para sacar el valor
+// entendamos que n es 0 e iterea encima de valores o los espacios que tenga valores, se suma con la variable 0 el valor que encuentra en esa posicion
+const result = valores.reduce((acumulador, valorActual) => acumulador + valorActual)
+console.log(result)
 
-const reducir  = (valores) =>{
-
-}
 
 //🧪 Parte 3: Detecta errores en el uso de arrow functions
 
@@ -147,24 +148,17 @@ const persona = {
   saludar: () => {
     console.log(`Hola, soy ${this.nombre}`);
   }
-};
+}//devuelve un undefined ya que no se puede usar el this
 
 persona.saludar();
-
-
-
-
 //3.2 ¿Y aquí?
 
 const sumar = (a, b) => {
   const resultado = a + b;
   return resultado;
-};
+};// esta todo correcto 
 
 console.log(sumar(2, 3));
-
-
-//1.1
 
 
 
